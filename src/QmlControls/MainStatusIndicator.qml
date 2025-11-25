@@ -45,7 +45,7 @@ RowLayout {
         property string _commLostText:      qsTr("Comms Lost")
         property string _readyToFlyText:    qsTr("Ready To Fly")
         property string _notReadyToFlyText: qsTr("Not Ready")
-        property string _disconnectedText:  qsTr("Disconnected - Click to manually connect")
+        property string _disconnectedText:  qsTr("This is my custom fork")
         property string _armedText:         qsTr("Armed")
         property string _flyingText:        qsTr("Flying")
         property string _landingText:       qsTr("Landing")
@@ -218,7 +218,7 @@ RowLayout {
                 heading:            qsTr("Vehicle Messages")
                 visible:            !vehicleMessageList.noMessages
 
-                VehicleMessageList { 
+                VehicleMessageList {
                     id: vehicleMessageList
                 }
             }
@@ -304,7 +304,7 @@ RowLayout {
                         textFormat:         TextEdit.RichText
                         clip:               true
                         visible:            object.expanded
-                        
+
                         property var fact:  null
 
                         onLinkActivated: (link) => {
@@ -360,7 +360,7 @@ RowLayout {
                     QGCLabel { Layout.fillWidth: true; text: qsTr("Vehicle Parameters") }
                     QGCButton {
                         text: qsTr("Configure")
-                        onClicked: {                            
+                        onClicked: {
                             mainWindow.showVehicleConfigParametersPage()
                             mainWindow.closeIndicatorDrawer()
                         }
@@ -369,7 +369,7 @@ RowLayout {
                     QGCLabel { Layout.fillWidth: true; text: qsTr("Vehicle Configuration") }
                     QGCButton {
                         text: qsTr("Configure")
-                        onClicked: {                            
+                        onClicked: {
                             mainWindow.showVehicleConfig()
                             mainWindow.closeIndicatorDrawer()
                         }
